@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+        font: normal 1.6rem/1.7 sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .container {
+        border: 2px dashed rgba(218, 112, 214, 0.699);
+        border-radius: 25px;
+        height: auto;
+        width: 80vw;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      h2 {
+        text-align: center;
+        color: #999;
+      }
+      #result {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        background: white;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      #settings {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      button {
+        width: 35vw;
+        margin: 20px auto;
+        background-color: pink;
+        height: 50px;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+        transition: font-size 0.5s, background-color 1s;
+      }
+
+      button:hover {
+        font-size: 1.1rem;
+        background: darkorchid;
+      }
+
+      #length {
+        font-size: 0.5rem;
+        padding: 4px;
+        width: 110px;
+      }
+
+      #mix {
+        margin: 5px;
+      }
+
+      label {
+        font-size: 0.5rem;
+        color: #b4886b;
+      }
+    </style>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Password Generator</h2>
+      <input id="result" disabled />
+      <div id="settings">
+        <input type="number" placeholder="password size" id="length" />
+        <label
+          ><input type="checkbox" id="mix" /> include lower / upper case
+          mix</label
+        >
+      </div>
+      <button>Generate</button>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
